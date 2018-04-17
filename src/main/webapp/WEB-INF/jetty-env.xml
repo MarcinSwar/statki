@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
+    <New id="mailSession" class="org.eclipse.jetty.plus.jndi.Resource">
+        <Arg>mail/Session</Arg>
+        <Arg>
+            <New class="org.eclipse.jetty.jndi.factories.MailSessionReference">
+                <Set name="user">xx</Set>
+                <Set name="password">yy</Set>
+            </New>
+        </Arg>
+    </New>
+</Configure>
